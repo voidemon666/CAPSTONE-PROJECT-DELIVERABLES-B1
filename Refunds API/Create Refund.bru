@@ -1,0 +1,30 @@
+meta {
+  name: Create Refund
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/refunds
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "amount": 1500,
+    "currency": "USD",
+    "reason": "Product Return"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

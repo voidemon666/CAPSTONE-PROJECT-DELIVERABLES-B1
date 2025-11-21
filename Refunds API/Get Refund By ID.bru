@@ -1,0 +1,21 @@
+meta {
+  name: Get Refund By ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/refunds/031b58c8-cbc7-4efa-b4e8-306cb0a4b5ea
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token}}
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

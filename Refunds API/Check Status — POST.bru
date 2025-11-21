@@ -1,0 +1,28 @@
+meta {
+  name: Check Status — POST
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/refunds/status
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "refundId": "031b58c8-cbc7-4efa-b4e8-306cb0a4b5ea"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
